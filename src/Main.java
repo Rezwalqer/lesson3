@@ -86,10 +86,12 @@ public class Main {
 
     public static void task9() {
         System.out.println("Задача для самостоятельной работы 9");
-        float total = 29000f;
-        for (int i = 0; i < 13; i++) {
-            total *= 1.01;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + total);
+        double total = 29000f;
+        double percent = 1.01;
+        double capital = 29000f;
+        for (int i = 0; i < 12; i++) {
+            capital = total * percent + capital;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + (int) capital);
         }
     }
 
@@ -111,11 +113,13 @@ public class Main {
         System.out.println("Задача для самостоятельной работы 11");
         int amount = 15000;
         int month = 0;
-        while (amount < 2_459_000) {
-            amount += 15000 + amount * 0.01;
+        double percent = 1.01;
+        double total = 15000;
+        while (total < 2_459_000) {
+            total = amount + total * percent;
             month += 1;
+            System.out.println("Спустя " + month + " месяц(ев), сумма накоплений равна " + (int) total + " рублей.");
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна " + amount + " рублей. Чтобы накопить 2459000 рублей потребуется " + (month + 1) + " месяцев");
     }
 
     public static void task12() {
