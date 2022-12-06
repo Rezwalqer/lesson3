@@ -55,6 +55,9 @@ public class Main {
     public static void task5() {
         System.out.println("Задача для самостоятельной работы 5");
         for (int i = 1904; i < 2097; i = i + 4) {
+            if (i % 100 == 0 && i % 400 != 0) {
+                continue;
+            }
             System.out.println(i + " год является високосным");
         }
     }
@@ -89,7 +92,7 @@ public class Main {
         double total = 29000f;
         double percent = 1.01;
         double capital = 29000f;
-        for (int i = 0; i < 12; i++) {
+        for (int i = 1; i < 13; i++) {
             capital = total * percent + capital;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + (int) capital);
         }
