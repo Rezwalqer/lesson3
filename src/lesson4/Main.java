@@ -24,9 +24,9 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1: ");
-        int[] first = {1, 2, 3};
-        double[] second = {1.57, 7.654, 9.986};
-        int[] third = {123, 234, 345, 456, 567, 678, 789, 890, 901};
+        int[] a = {1, 2, 3};
+        double[] b = {1.57, 7.654, 9.986};
+        int[] c = {123, 234, 345, 456, 567, 678, 789, 890, 901};
 
     }
 
